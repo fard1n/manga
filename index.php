@@ -1,17 +1,23 @@
 <?php
 require "views/index.view.php";
 require 'function.php';
+require 'config.php';
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
     if(isset($_FILES['fileToUpload'])){
+
         $file = $_FILES['fileToUpload'];
-        $name = pathinfo($file['name'], PATHINFO_FILENAME);
-       
+        $fileName = pathinfo($file['name'], PATHINFO_FILENAME);
         
-         mkdir('uploads\\' . $name);
-         upload($file, 'C:\xampp\htdocs\Manga\uploads\\' . $name . '\\');
+        if(file_exists($dir . $fileName)){
+            echo 'File exist with the same name';
+        }
+        else
+         mkdir('uploads/' . $fileName);
+         upload($file, $dir . $fileName . '/');
+         unzip($dir . $fileName . '/' . $file['name'], $dir . $fileName . '/');
     }
+}
 
    
-}
