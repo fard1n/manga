@@ -10,15 +10,50 @@
 </head>
 <body>
     <div class="container">
-        <form action="" method="post" enctype="multipart/form-data">
+        <section class="upload">
+            <form action="" method="post" enctype="multipart/form-data">
             <label for="name">Manga name:</label>
             <input type="text" id="name" name="name">
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload" name="submit">
-        </form>
-    </div>
-    <div class='card'>
-        
-    </div>
+            </form>
+        </section>
+            <section class='thumbs clear'>
+                <div class='card left'>
+                    <div class="card__img">
+                    <img src="1.jpg">
+                    </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
+                    <div class="card__text">
+                
+                    </div>
+                </div>
+
+                <div class='card left'>
+                    <div class="card__img">
+                    <img src="1.jpg">
+                    </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
+                    <div class="card__text">
+                
+                    </div>
+                </div>
+
+                <div class='card left'>
+                    <div class="card__img">
+                    <img src="1.jpg">
+                    </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
+                    <div class="card__text">
+                
+                    </div>
+                </div>
+            </section>
+            
+            
+            </div>
+
+        </div>
+    
 </body>
 </html>

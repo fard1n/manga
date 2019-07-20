@@ -3,7 +3,11 @@
     function upload($file,$path)
     {
         
-        $res = move_uploaded_file($file['tmp_name'], $path . $file['name']);
+        if($res = move_uploaded_file($file['tmp_name'], $path . $file['name'])){
+            return true;
+            
+        }
+        return false;
      
     }
 
@@ -21,9 +25,7 @@
 
     function unzip($filePath, $outputPath){
        
-        echo $filePath;
-        echo '</br>';
-
+    
         $zip = new ZipArchive;
         $res = $zip->open($filePath);
 
@@ -32,9 +34,23 @@
           $zip->extractTo($outputPath);
           $zip->close();
           echo "file extract sucessfully";
+          return true;
         } else {
           echo '<br> faild to extract </br>';
+          return false;
         }
     }
 
+    function getDirContents(){
+        $contents = [];
+    if (is_dir($dir)) {
+        if ($dh = opendir($dir)) {
+            while (($file = readdir($dh)) !== false) {
+               $contents = $file;
+            }
+            closedir($dh);
+        }
+    }
+}
+    
 ?>
