@@ -52,5 +52,22 @@
         }
     }
 }
-    
+
+function calculateNumberOfPages($itemCounts, $itemsPerPage = 6){
+
+        $pageCounts = ceil($itemCounts/$itemsPerPage);
+        return $pageCounts;
+    }
+
+function generatePageNumber($pageCounts, $baseLink){
+
+    $counter = 1;
+    while($counter <= $pageCounts){
+        
+        echo "<li><a href='{$baseLink}?id={$counter}'>$counter</a></li>";
+        $counter++;
+    }
+
+}
+
 ?>

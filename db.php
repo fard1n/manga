@@ -23,6 +23,8 @@ function query($conn, $query, $binding){
     $stmt = $conn -> prepare($query);
     if ($stmt -> execute($binding))
         return $stmt;
+    else
+        return false;
     
     
 

@@ -30,7 +30,7 @@
 
 .card__img >img{
     
-    max-width:300px;
+    max-width:250px;
     height: 300px;
 
 }   
@@ -48,4 +48,9 @@
 
 .upload > form{
     width: fit-content;
+}
+
+.page-numbers  > ul > li{
+
+    display: inline;
 }

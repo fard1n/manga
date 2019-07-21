@@ -1,8 +1,9 @@
 <?php
-require "views/index.view.php";
 require 'function.php';
 require 'config.php';
 require 'db.php';
+require "blog.php";
+
 
 
 
@@ -26,31 +27,27 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     
                     if(unzip($dir . $fileName . '/' . $file['name'], $dir . $fileName . '/')){
 
-                        //insert into data base
+                         query($conn , "insert into manga(title) values(:title)", array('title' => $fileName));
                         
-
+                        
                     }
                 }
             }
-
+            
         }
 
-    //get directory  names
+    }}
 
-   
-    //get directory 1.jpg image
+     $itemCounts = query($conn , "select count(title) from manga", array());
+     $itemCounts = $itemCounts ->fetch();
+     $itemCounts =  $itemCounts[0];
 
-    //show them
-}}
-
-$res = connect($host = '', 'manga','root', '');
-var_dump($res);
-
-    $q = query($res , 'select * from manga',[]);
-
-    
-    
-   while($row = $q->fetch()){
-       print_r($row);
-    }
-   
+        //get directory  names
+        
+        
+        
+        //get directory 1.jpg image
+        
+        //show them
+        
+        include "views/index.view.php";

@@ -21,7 +21,7 @@
             <section class='thumbs clear'>
                 <div class='card left'>
                     <div class="card__img">
-                    <img src="1.jpg">
+                    <img src="https://placeimg.com/640/480/any">
                     </div>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
                     <div class="card__text">
@@ -31,7 +31,7 @@
 
                 <div class='card left'>
                     <div class="card__img">
-                    <img src="1.jpg">
+                    <img src="https://placeimg.com/640/480/any">
                     </div>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
                     <div class="card__text">
@@ -41,7 +41,7 @@
 
                 <div class='card left'>
                     <div class="card__img">
-                    <img src="1.jpg">
+                    <img src="https://placeimg.com/640/480/any">
                     </div>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
                     <div class="card__text">
@@ -49,8 +49,46 @@
                     </div>
                 </div>
             </section>
-            
-            
+
+            </section>
+            <section class='thumbs clear'>
+                <div class='card left'>
+                    <div class="card__img">
+                    <img src="https://placeimg.com/640/480/any">
+                    </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
+                    <div class="card__text">
+                
+                    </div>
+                </div>
+
+                <div class='card left'>
+                    <div class="card__img">
+                    <img src="https://placeimg.com/640/480/any">
+                    </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
+                    <div class="card__text">
+                
+                    </div>
+                </div>
+
+                <div class='card left'>
+                    <div class="card__img">
+                    <img src="https://placeimg.com/640/480/any">
+                    </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
+                    <div class="card__text">
+                
+                    </div>
+                </div>
+            </section>
+            <section class="page-numbers">
+            <ul>
+               <?php
+               generatePageNumber(calculateNumberOfPages($itemCounts),'http://127.0.0.1/manga/index.php');
+               ?>
+            </ul>
+            </section>
             </div>
 
         </div>
