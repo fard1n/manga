@@ -1,18 +1,26 @@
 <?php
-require 'function.php';
 require 'config.php';
+require 'function.php';
 require 'db.php';
-require "blog.php";
+require "setup.php";
 
 
 
-
+$page;
+$pageStatus;
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
     if(isset($_FILES['fileToUpload'])){
 
         $file = $_FILES['fileToUpload'];
         $fileName = pathinfo($file['name'], PATHINFO_FILENAME);
+        // $fileWithOutSpace = preg_replace('/\s/', '-', $fileName);
+        
+        if(preg_replace('/\s/', '-', $fileName))
+        {
+            $fileName = preg_replace('/\s/', '-', $fileName); 
+        }
+        
         
         if(file_exists($dir . $fileName)){
            
@@ -38,16 +46,24 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     }}
 
-     $itemCounts = query($conn , "select count(title) from manga", array());
-     $itemCounts = $itemCounts ->fetch();
-     $itemCounts =  $itemCounts[0];
+        $itemCounts = query($conn , "select count(title) from manga", array());
+        $itemCounts = $itemCounts ->fetch();
+        $itemCounts =  $itemCounts[0];
 
-        //get directory  names
-        
-        
-        
-        //get directory 1.jpg image
-        
-        //show them
+
+        if(isset($_GET['page'])){
+           
+            $pageStatus = true;
+            $page = $_GET['page'];
+        }
+        elseif(empty($_GET)){
+           
+            $pageStatus = true;
+            $page = 1;
+        }
+        else{
+
+            $pageStatus = false;
+        }
         
         include "views/index.view.php";

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="views/css/reset.css">
+    <link rel="stylesheet" href="views/css/uikit.css">
     <link rel="stylesheet" href="views/css/style.css">
 </head>
 <body>
@@ -16,82 +17,26 @@
             <input type="text" id="name" name="name">
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload" name="submit">
+            
             </form>
         </section>
-            <section class='thumbs clear'>
-                <div class='card left'>
-                    <div class="card__img">
-                    <img src="https://placeimg.com/640/480/any">
-                    </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
-                    <div class="card__text">
-                
-                    </div>
-                </div>
 
-                <div class='card left'>
-                    <div class="card__img">
-                    <img src="https://placeimg.com/640/480/any">
-                    </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
-                    <div class="card__text">
-                
-                    </div>
-                </div>
+            <?php 
+            if($pageStatus)
+                 generateCards($page,1);
+            else
+                echo"404";  
+            ?>
 
-                <div class='card left'>
-                    <div class="card__img">
-                    <img src="https://placeimg.com/640/480/any">
-                    </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
-                    <div class="card__text">
-                
-                    </div>
-                </div>
-            </section>
-
-            </section>
-            <section class='thumbs clear'>
-                <div class='card left'>
-                    <div class="card__img">
-                    <img src="https://placeimg.com/640/480/any">
-                    </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
-                    <div class="card__text">
-                
-                    </div>
-                </div>
-
-                <div class='card left'>
-                    <div class="card__img">
-                    <img src="https://placeimg.com/640/480/any">
-                    </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
-                    <div class="card__text">
-                
-                    </div>
-                </div>
-
-                <div class='card left'>
-                    <div class="card__img">
-                    <img src="https://placeimg.com/640/480/any">
-                    </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed distinctio ratione iste impedit in illo fugit quod quibusdam, sint numquam hic qui. Nesciunt assumenda incidunt eveniet vel ducimus quod.
-                    <div class="card__text">
-                
-                    </div>
-                </div>
-            </section>
-            <section class="page-numbers">
+            <section>
             <ul>
                <?php
-               generatePageNumber(calculateNumberOfPages($itemCounts),'http://127.0.0.1/manga/index.php');
+               generatePageNumber(calculateNumberOfPages($itemCounts, $itemsPerPage),'index.php');
                ?>
             </ul>
             </section>
             </div>
 
-        </div>
     
 </body>
 </html>

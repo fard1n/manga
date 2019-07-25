@@ -21,11 +21,14 @@ function connect($host = 'localhost', $name, $username = 'root', $password = '')
 function query($conn, $query, $binding){
 
     $stmt = $conn -> prepare($query);
-    if ($stmt -> execute($binding))
+    if ($stmt -> execute($binding)){
+       
         return $stmt;
-    else
+    }
+    else{
         return false;
-    
+        
+    }
     
 
 }

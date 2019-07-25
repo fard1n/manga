@@ -1,5 +1,6 @@
 <?php
-$dir = 'C:/xampp/htdocs/Manga/uploads/';
+$dir = 'uploads/';
 $dataBaseName = "manga";
+$itemsPerPage = 6;
 
 ?>

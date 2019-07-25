@@ -14,14 +14,29 @@
 .container{
     max-width: 1200px;
     margin: auto;
-    background-color: #6a6a6a;
+    background-color:   #edc7b7;
+    border: 6px solid #B22222;
+    border-radius: 10px;
+
 }
 
 .card{
     
     width: 25%;
     margin: 0 50px 0 0;
-    background-color: red;
+    background-color: #ac3b61;
+}
+
+.card__text{
+    
+    text-align: center;
+    margin: 5px 0 5px 0;
+     
+}
+
+.card__text > a{
+    color: #123c69;
+    font-size: 1.6em;
 }
 
 .card__img{
@@ -33,7 +48,8 @@
     max-width:250px;
     height: 300px;
 
-}   
+}
+
 
 .thumbs{
     margin: auto 100px 20px;
@@ -53,4 +69,17 @@
 .page-numbers  > ul > li{
 
     display: inline;
+}
+
+.page > a {
+    display: block;
+    text-align: center;
+}
+
+.page > a > img{
+    
+    margin-top: 20px;
+    cursor: -webkit-zoom-in;
+    height: 100vh;
+
 }
